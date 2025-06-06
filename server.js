@@ -9,7 +9,8 @@ const deployRoutes = require("./routes/deploy");
 const app = express();
 const PORT = 3001;
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({ origin: ["http://localhost:3000", "http://localhost:5173"] }));
+
 app.use(express.json());
 
 // przekazujemy wszystkie /api/chat i /api/health do chatRoutes
